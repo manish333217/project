@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estore - Checkout</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .checkout-form {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+
+    .checkout-form h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .checkout-form h3 {
+      margin: 20px 0 10px;
+      color: #ff6f61;
+    }
+
+    .checkout-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #e0e0e0;
+    }
+
+    .checkout-form input,
+    .checkout-form textarea,
+    .checkout-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .checkout-form input:focus,
+    .checkout-form textarea:focus,
+    .checkout-form select:focus {
+      outline: none;
+      border-color: #ff6f61;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="top-left">
+        <span class="country">
+          <img src="./header_icon.png" alt="USA" style="width:20px; vertical-align:middle; margin-right:5px;">
+          <span>+777 2345 7886</span>
+        </span>
+      </div>
+      <div class="top-right">
+        <a href="signin.html" class="btn">Sign In</a>
+      </div>
+    </div>
+    <div class="main-nav">
+      <h1 class="logo">Estore</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="cart.html">Cart</a>
+
+            <ul class="dropdown-menu">
+              <li><a href="cart.html">View Cart</a></li>
+              <li><a href="checkout.html">Checkout</a></li>
+              <li><a href="./wishlist.html">Wishlist</a></li>
+            </ul>
+          </li>
+
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="orders.html">Orders</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="Search products">
+      </div>
+    </div>
+  </header>
+  <section class="checkout-form">
+    <h2>Checkout</h2>
+    <form action="payment.html" method="POST">
+
+      <h3>Select Payment Method</h3>
+
+      <input type="radio" name="payment" id="card" checked>
+      <label for="card" class="pay-btn">💳 Card</label>
+
+      <input type="radio" name="payment" id="upi">
+      <label for="upi" class="pay-btn">📱 UPI</label>
+
+      <input type="radio" name="payment" id="cod">
+      <label for="cod" class="pay-btn">🚚 COD</label>
+
+      <div class="card-details">
+        <h3>Card Details</h3>
+        <label for="card-name">Name on Card</label>
+        <input type="text" id="card-name" name="card-name" placeholder="Name on Card" required>
+
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number" maxlength="16" placeholder="Card Number" required>
+
+        <label for="expiry">Expiry (MM/YY)</label>
+        <input type="text" id="expiry" name="expiry" maxlength="5" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" name="cvv" maxlength="4" placeholder="CVV" required>
+      </div>
+
+      <div class="upi-details">
+        <h3>UPI Payment</h3>
+        <label for="upi-app">Select App</label>
+        <select id="upi-app" name="upi-app">
+          <option>PhonePe</option>
+          <option>Google Pay</option>
+          <option>Paytm</option>
+        </select>
+
+        <label for="upi-id">UPI ID</label>
+        <input type="text" id="upi-id" name="upi-id" placeholder="Enter UPI ID" required>
+      </div>
+
+      <div class="cod-details">
+        <p>Cash on Delivery selected. Pay after delivery.</p>
+      </div>
+
+      <button type="submit" class="btn">Proceed To Payment</button>
+    </form>
+
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h2>Estore.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="orders.html">Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Products</h3>
+        <ul>
+          <li><a href="product1.html">Product 1</a></li>
+          <li><a href="product2.html">Product 2</a></li>
+          <li><a href="product3.html">Product 3</a></li>
+          <li><a href="product4.html">Product 4</a></li>
+          <li><a href="product5.html">Product 5</a></li>
+          <li><a href="product6.html">Product 6</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contact.html">Customer Support</a></li>
+          <li><a href="about.html">Our Promise</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright ©2026 All rights reserved | This template is made with ♡ by Colorlib.</p>
+      <div>
+        <a href="https://linkedin.com/in/manish-kumar-nadella-8a7864320">Linkedln</a>
+        <a href="https://github.com/manish333217">Github</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

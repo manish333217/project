@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estore - Sign Up</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-nav">
+        <h1 class="logo">Estore</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search products">
+        </div>
+    </div>
+    </header>
+    <section class="signin">
+        <h2>Create Your Account</h2>
+        <form class="signin-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <label for="confirm">Confirm Password</label>
+            <input type="password" id="confirm" name="confirm" required minlength="6">
+
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p class="signup-link">Already have an account? <a href="signin.html">Sign In</a></p>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estore - OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .payment-box {
+            width: 500px;
+            margin: 80px auto;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            background: #222;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ff4b3a;
+        }
+
+        .note {
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="payment-box">
+
+        <h2>OTP Verification</h2>
+
+        <form action="order.html" method="POST">
+            <label for="mobile-number">Your Mobile number</label>
+            <input type="text" id="mobile-number" name="mobile-number" placeholder="Enter Mobile Number" required>
+
+            <div class="note">
+                OTP sent to your registered mobile number.
+            </div>
+
+            <label for="otp">Enter OTP</label>
+            <input type="text" id="otp" name="otp" maxlength="6" pattern="\d{6}" placeholder="Enter 6 Digit OTP" required>
+
+            <button type="submit" class="btn">Verify OTP & Place Order</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

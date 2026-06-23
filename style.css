@@ -122,19 +122,63 @@ body {
     border-radius: 8px;
     text-align: center;
     width: 400px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: cardFadeUp 0.8s ease forwards;
+    opacity: 0;
 }
 
 .product:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(255, 111, 97, 0.3);
+}
+
+.product:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.product:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.product:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.product:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.product:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+.product:nth-child(6) {
+    animation-delay: 1.2s;
 }
 
 .product img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
+.product:hover img {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 10px 20px red;
+}
+
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .product h3 {
     margin: 15px 0;
 }

@@ -50,6 +50,20 @@
       outline: none;
       border-color: #ff6f61;
     }
+
+    .red-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6f61;
+      border: none;
+      text-decoration: none;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .red-button:hover {
+      background-color: #e4776e;
+    }
   </style>
 </head>
 
@@ -94,7 +108,8 @@
   </header>
   <section class="checkout-form">
     <h2>Checkout</h2>
-    <form action="payment.html" method="POST">
+    <form action="payment.html" method="post">
+
 
       <h3>Select Payment Method</h3>
 
@@ -139,7 +154,7 @@
         <p>Cash on Delivery selected. Pay after delivery.</p>
       </div>
 
-      <button type="submit" class="btn">Proceed To Payment</button>
+      <a class="red-button" href="./payment.html" target="_blank">Click To Payment</a>
     </form>
 
   </section>

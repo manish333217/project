@@ -64,6 +64,21 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
+
+        .blue-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .blue-button:hover {
+            background-color: #e4776e;
+        }
     </style>
 </head>
 
@@ -82,9 +97,11 @@
             </div>
 
             <label for="otp">Enter OTP</label>
-            <input type="text" id="otp" name="otp" maxlength="6" pattern="\d{6}" placeholder="Enter 6 Digit OTP" required>
+            <input type="text" id="otp" name="otp" maxlength="6" pattern="\d{6}" placeholder="Enter 6 Digit OTP"
+                required>
 
-            <button type="submit" class="btn">Verify OTP & Place Order</button>
+            <a class="blue-button" href="./order.html" target="_blank">Verify OTP & Place Order</a>
+
         </form>
 
     </div>
